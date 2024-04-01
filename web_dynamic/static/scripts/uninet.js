@@ -5,7 +5,7 @@ $(document).ready(function() {
         $(".filter").toggleClass("resize_main")
     });
 
-    fetch('http://127.0.0.1:5001/api/v1/categories/')
+    fetch('http://34.204.61.140:5005/api/v1/categories/')
                 .then(response => response.json())
                 .then(data => {
                         console.log(data)
