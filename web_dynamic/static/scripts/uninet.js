@@ -9,20 +9,14 @@ $(document).ready(function() {
                 .then(response => response.json())
                 .then(data => {
                         console.log(data)
-                        $(".choice").empty();
-                        data.forEach((category) => {
-                            $(".choice").append(`
-                            <div>${category.name}</div>
-                            `);
-                        });
-                }).catch(error => console.error('Error:', error));
+                });
 
     $(".content-type-video").click(function() {
         $(".content_section").empty();
         $(".content_section").append(`<div class="video_content"></div>`);
         $(".video_content").append(`
         <article>
-            <div class="article-content">content</div>
+        <div class="article-content"><iframe src="https://www.youtube.com/embed/ERBurYnmMF8?si=sQ-sZyIZCEeUPQpl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
             <div class="article-description">
                 <div class="creator_icon"></div>
                 <div class="description">description yyyyyyyyy yyyyyyyyyyyyyyyyy yyyyyyyyyyyyyy uuuuuuuuuuu</div>
@@ -66,5 +60,43 @@ $(document).ready(function() {
     $(".content-type-teasers").click(function() {
         $(".content_section").empty();
         $(".content_section").append(`<div class="teaser_content"></div>`);
+    });
+
+    $(".user_icon").click(function() {
+        $(".user_info").toggleClass("view_user_info");
+    });
+
+    $("#login").hover(function() {
+        $(this).css("background", "black");
+    }, function() {
+        $(this).css("background", "#d20a0a");
+    });
+
+    $("#account_info").hover(function() {
+        $(this).css("background", "black");
+    }, function() {
+        $(this).css("background", "#d20a0a");
+    });
+
+    $("#logout").hover(function() {
+        $(this).css("background", "black");
+    }, function() {
+        $(this).css("background", "#d20a0a");
+    });
+
+    $("#login").click(function() {
+	    window.location.href = "/login";
+    });
+
+    $("#logout").click(function() {
+	    window.location.href = "/login";
+    });
+
+    $("#account_info").click(function() {
+        window.location.href = "/user";
+    });
+
+    $("#sign-up").click(function() {
+        window.location.href = "/sign-up";
     });
 });

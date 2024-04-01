@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>UniNet - Home</title>
-<link rel="stylesheet" href="../static/styles/uninet.css?{{ cache_id }}" />
+<link rel="stylesheet" href="../static/styles/uninet.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap">
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="../static/scripts/uninet.js"></script>
+<script src="../static/scripts/uninet.js"></script>
 </head>
 <body>
 
@@ -15,6 +15,9 @@
     <div class="flex">
         <div class="menu">
             <div class="hamburger-menu"></div>
+        </div>
+        <div class="logo">
+            <img src="../static/images/nyanchwa-logo1.jpg">
         </div>
         <h1>UniNet</h1>
     </div>
@@ -30,10 +33,20 @@
 </header>
 <hr>
 
+<div class="user_info view_user_info">
+    {% if user.is_authenticated %}
+        <div id="account_info">Account</div>
+        <div id="logout">Logout</div>
+    {% else %}
+        <div id="login">Login</div>
+        <div id="sign-up">Sign-up</div>
+    {% endif%}
+</div>
+
 <nav>
     <div class="navigation">
         <ul>
-            <li><a href="#">Home</a></li>
+            <li><a href="/">Home</a></li>
             <li><a href="#">Feed</a></li>
             <li><a href="#">Trending</a></li>
             <li><a href="#">Trending</a></li>
@@ -65,7 +78,7 @@
 <main class="content_section">
     <div class="video_content">
         <article>
-            <div class="article-content">content</div>
+            <div class="article-content"><iframe src="https://www.youtube.com/embed/ERBurYnmMF8?si=sQ-sZyIZCEeUPQpl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
             <div class="article-description">
                 <div class="creator_icon"></div>
                 <div class="description">description yyyyyyyyy yyyyyyyy yyyyyyyyyyyyyy uuuuuuuuuuu</div>

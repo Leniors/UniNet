@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UniNet - Home</title>
+<link rel="stylesheet" href="../static/styles/uninet.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap">
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="../static/scripts/uninet.js"></script>
+</head>
+<body>
+
+    <header>
+        <div class="flex">
+            <div class="menu">
+                <div class="hamburger-menu"></div>
+            </div>
+            <div class="logo">
+                <img src="nyanchwa-logo1.jpg">
+            </div>
+            <h1>UniNet</h1>
+        </div>
+        <div class="flex">
+            <form action="">
+                <input type="text" name="" id="" placeholder="search">
+            </form>
+            <div class="search-icon"></div>
+        </div>
+        <div class="user_icon">
+            user info
+        </div>
+    </header>
+    <hr>
+
+    <div class="user_info view_user_info">
+        {% if user.is_authenticated %}
+            <div id="account_info">Account</div>
+            <div id="logout">Logout</div>
+        {% else %}
+            <div id="login">Login</div>
+            <div id="sign-up">Sign-up</div>
+        {% endif%}
+    </div>
+
+    <nav>
+        <div class="navigation">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="#">Feed</a></li>
+                <li><a href="#">Trending</a></li>
+                <li><a href="#">Trending</a></li>
+                <li><a href="#">Trending</a></li>
+                <li><a href="#">Trending</a></li>
+                <!-- Add more navigation items as needed -->
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="user-profile">
+            <h2>{{ user.username }}'s Profile</h2>
+            <div>
+                <div>
+                    <label><b>Username: </b>{{ user.username }}</label>
+                </div>
+                <div>
+                    <label><b>Email: </b>{{ user.email }}</label>
+                </div>
+                <div>
+                    <label><b>More feature's are comeing, stay tuned {{ user.username }}.</b></label>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

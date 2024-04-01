@@ -5,13 +5,14 @@ Contains the class DBStorage
 
 import models
 from models.category import Category
+from models.user import User
 from models.base_model import BaseModel, Base
 from os import getenv
 import sqlalchemy
 from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker
 
-classes = {"Category": Category}
+classes = {"Category": Category, "User": User}
 
 
 class DBStorage:
@@ -72,6 +73,21 @@ class DBStorage:
     def get(self, cls, id):
         """get one object from a class"""
         obj = self.__session.query(cls).filter_by(id=id).first()
+        return obj
+
+    def get_user_by_email(self, cls, email):
+        """Get a user by an email"""
+        obj = self.__session.query(cls).filter_by(email=email).first()
+        return obj
+
+    def get_user_by_id(self, cls, id):
+        """Get a user by an id"""
+        obj = self.__session.query(cls).filter_by(id=id).first()
+        return obj
+
+    def get_user_by_username(self, cls, username):
+        """Get a user by a username"""
+        obj = self.__session.query(cls).filter_by(username=username).first()
         return obj
 
     def count(self, cls=None):
