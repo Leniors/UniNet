@@ -85,18 +85,18 @@ $(document).ready(function() {
     });
 
     $("#login").click(function() {
-	    window.location.href = "/login";
+	    window.location.href = "/uninet/login";
     });
 
     $("#logout").click(function() {
-	    window.location.href = "/login";
+	    window.location.href = "/uninet/login";
     });
 
     $("#account_info").click(function() {
-        window.location.href = "/user";
+        window.location.href = "/uninet/user";
     });
 
     $("#sign-up").click(function() {
-        window.location.href = "/sign-up";
+        window.location.href = "/uninet/sign-up";
     });
 });
