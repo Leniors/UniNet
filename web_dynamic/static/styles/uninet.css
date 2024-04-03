@@ -92,7 +92,7 @@ header {
     width: 30px;
     height: 3px;
     background-color: #333; /* Color of the hamburger lines */
-    margin-right: 10px; /* Adjust spacing as needed */
+    margin-right: 5px; /* Adjust spacing as needed */
     position: relative;
 }
 
@@ -185,7 +185,6 @@ header input {
 }
 
 main {
-    /* margin-left: 10px; */
     margin-top: 140px;
 }
 
@@ -258,7 +257,8 @@ main {
     background-color: #f3f5f8;
     display: flex;
     flex-wrap: wrap;
-    padding-left: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
     padding-top: 5px;
 }
 
@@ -306,7 +306,7 @@ main {
 
 article {
     width: 24%; /* Adjust width to leave space between articles */
-    margin: 5px; /* Add margin bottom to separate articles */
+    margin: 5px auto; /* Add margin bottom to separate articles */
     background-color: #ffffff; /* Set background color for articles */
     box-shadow: 0 2px 4px rgba(23, 3, 3, 0.1);
     border-radius: 10px; /* Add border radius to articles */
@@ -377,4 +377,157 @@ article:hover {
 
 .user-profile h2, .user-profile div {
     margin-bottom: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        align-items: center;
+    }
+    header h1 {
+        font-size: 30px;
+        margin-right: 3px;
+        margin-left: 3px;
+    }
+    .logo img {
+        height: 64.3px;
+    }
+    .search {
+        width: 50px;
+        justify-content: center;
+    }
+    .search input {
+        display: none;
+    }
+    .search-icon {
+        width: 50px;
+    }
+    .menu {
+        width: 35px;
+    }
+    .filter {
+        position: fixed;
+        display: flex;
+        align-items: center;
+        padding-left: 15px;
+        height: 55px;
+        margin-top: 79px;
+        background-color: #ffffff;
+        width: 100%;
+        z-index: 1000;
+        justify-content: center;
+    }
+    .content-type {
+        display: flex;
+        border-right: none;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+    .choice {
+        display: none;
+    }
+    main {
+        margin-top: 140px;
+    }
+    article {
+        width: 95%; /* Adjust width to leave space between articles */
+        margin: 5px auto; /* Add margin bottom to separate articles */
+        background-color: #ffffff; /* Set background color for articles */
+        box-shadow: 0 2px 4px rgba(23, 3, 3, 0.1);
+        border-radius: 10px; /* Add border radius to articles */
+    }
+    .article-content {
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        aspect-ratio: 16/9; /* Set aspect ratio for content area */
+        background-color: brown;
+        color: #ffffff;
+        border-radius: 10px;
+    }
+    .resize_main {
+        margin-left: 100px;
+    }
+
+    .navigation {
+        width: 100px;
+    }
+    .resize_content_type {
+        margin-left: 100px;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 860px) {
+    header h1 {
+        font-size: 30px;
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+    .logo img {
+        height: 84.3px;
+    }
+    .search {
+        width: 170px;
+    }
+    .search input {
+        width: 120px;
+        height: 30px;
+    }
+    .search-icon {
+        width: 30px;
+    }
+    .menu {
+        width: 35px;
+    }
+    .filter {
+        position: fixed;
+        display: flex;
+        align-items: center;
+        padding-left: 15px;
+        height: 55px;
+        margin-top: 79px;
+        background-color: #ffffff;
+        width: 100%;
+        z-index: 1000;
+        justify-content: center;
+    }
+    .content-type {
+        display: flex;
+        border-right: none;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+    .choice {
+        display: none;
+    }
+    main {
+        margin-top: 140px;
+    }
+    article {
+        width: 48%; /* Adjust width to leave space between articles */
+        margin: 5px auto; /* Add margin bottom to separate articles */
+        background-color: #ffffff; /* Set background color for articles */
+        box-shadow: 0 2px 4px rgba(23, 3, 3, 0.1);
+        border-radius: 10px; /* Add border radius to articles */
+    }
+    .article-content {
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        aspect-ratio: 16/9; /* Set aspect ratio for content area */
+        background-color: brown;
+        color: #ffffff;
+        border-radius: 10px;
+    }
+    .resize_main {
+        margin-left: 100px;
+    }
+
+    .navigation {
+        width: 100px;
+    }
+    .resize_content_type {
+        margin-left: 100px;
+    }
 }
