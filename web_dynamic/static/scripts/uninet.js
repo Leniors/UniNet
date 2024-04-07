@@ -5,10 +5,13 @@ $(document).ready(function() {
         $(".filter").toggleClass("resize_main")
     });
 
-    fetch('http://34.204.61.140:5005/api/v1/categories/')
+    fetch('http://34.204.61.140:5001/api/v1/categories/')
                 .then(response => response.json())
                 .then(data => {
-                        console.log(data)
+			$(".choice").empty();
+			data.forEach(category => {
+				$(".choice").append(`<div>${category.name}</div>`);
+			});
                 });
 
     $(".content-type-video").click(function() {
@@ -83,6 +86,12 @@ $(document).ready(function() {
     }, function() {
         $(this).css("background", "#d20a0a");
     });
+	
+	$("#sign-up").hover(function() {
+		$(this).css("background", "black");
+	}, function() {
+		$(this).css("background", "#d20a0a");
+	});
 
     $("#login").click(function() {
 	    window.location.href = "/uninet/login";

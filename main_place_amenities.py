@@ -17,8 +17,10 @@ category_4 = Category(name="Documentary")
 category_4.save()
 category_5 = Category(name="Nature")
 category_5.save()
-category_6 = Category(name="Food")
+category_6 = Category(name="Nyanchwa")
 category_6.save()
+category_7 = Category(name="Movies")
+category_7.save()
 
 storage.save()
 

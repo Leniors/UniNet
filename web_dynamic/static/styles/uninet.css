@@ -154,8 +154,8 @@ header input {
 .navigation {
     position: fixed;
     top: 80px;
-    left: -200px;
-    width: 200px;
+    left: -168px;
+    width: 168px;
     color: #333;
     height: 100vh; /* Full height of the viewport */
     z-index: 1001; /* Ensure the navigation stays above other content */
@@ -363,7 +363,7 @@ article:hover {
 }
 
 .resize_main {
-    margin-left: 200px;
+    margin-left: 168px;
 }
 
 .user-profile {
