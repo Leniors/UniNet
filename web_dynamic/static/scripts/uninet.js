@@ -26,13 +26,34 @@ $(document).ready(function() {
     });
 
     fetch('http://34.204.61.140:5001/api/v1/categories/')
-                .then(response => response.json())
-                .then(data => {
+        .then(response => response.json())
+        .then(data => {
 			$(".choice").empty();
 			data.forEach(category => {
 				$(".choice").append(`<div>${category.name}</div>`);
 			});
-                });
+    });
+
+    fetch('http://34.204.61.140:5001/api/v1/tales/')
+        .then(response => response.json())
+        .then(data => {
+            $(".content_section").empty();
+            $(".content_section").append(`<div class="video_content"></div>`);
+			data.forEach(tale => {
+                $(".video_content").append(`
+                <article class="tale">
+                    <div class="tale-header">
+                        <h2 class="tale-title">${tale.title}</h2>
+                        <div class="tale-metadata">Author: ${tale.title} | Date: ${tale.created_at}</div>
+                    </div>
+                    <div class="tale-content">
+                    ${tale.content}
+                    </div>
+                </article>
+                `);
+			});
+    });
+
 
     $(".content-type-video").click(function() {
         $(".content_section").empty();
