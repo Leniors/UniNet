@@ -266,10 +266,6 @@ main {
     padding-top: 5px;
 }
 
-.tales_content article {
-    width: 23%;
-}
-
 .tales_content {
     max-width: 1700px;
     background-color: #f3f5f8;
