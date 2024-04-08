@@ -8,11 +8,6 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap">
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="../static/scripts/uninet.js"></script>
-<style>
-	main {
-		margin-top: 120px;
-	}
-</style>
 </head>
 <body>
 
@@ -63,50 +58,10 @@
     </nav>
 
     <main>
-        <div class="create_button">
-            +
-        </div>
-
-        <div id="creator_type" class="dont_display">
-            <div id="create_video">Create video</div>
-            <div id="create_tale">Create tale</div>
-            <div id="create_teaser">Create teaser</div>
-	</div>
-        
-        <div class="user_content">
-            {% if tales %}
-            <div class="content_section">
-                <div class="tales_content">
-                    {% for tale in tales %}
-                    <article class="tale">
-                        <div class="tale-header">
-                            <h2 class="tale-title">{{ tale.title }}</h2>
-                            <div class="tale-metadata">Author: {{ user.username }} | Date: {{ tale.created_at }} </div>
-                        </div>
-                        <div class="tale-content">
-                                {{ tale.content }}
-                        </div>
-                    </article>
-                    {% endfor %}
-                </div>
-            </div>
-            {% endif %}
-            
-        </div>
-        
-        <div class="user-profile">
-            <h2>{{ user.username }}'s Profile</h2>
-            <div>
-                <div>
-                    <label><b>Username: </b>{{ user.username }}</label>
-                </div>
-                <div>
-                    <label><b>Email: </b>{{ user.email }}</label>
-                </div>
-                <div>
-                    <label><b>More feature's are comeing, stay tuned {{ user.username }}.</b></label>
-                </div>
-            </div>
+        <div id="creator_type">
+            <div class="create_video">Create video</div>
+            <div class="create_tale">Create tale</div>
+            <div class="create_teaser">Create teaser</div>
         </div>
     </main>
 </body>

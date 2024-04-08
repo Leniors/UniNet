@@ -6,7 +6,7 @@ from os import getenv
 import sqlalchemy
 from sqlalchemy import Column, String
 from flask_login import UserMixin
-
+from sqlalchemy.orm import relationship
 
 class User(BaseModel, Base, UserMixin):
     """Representation of a user """
@@ -15,6 +15,7 @@ class User(BaseModel, Base, UserMixin):
         username = Column(String(128), nullable=False, unique=True)
         email = Column(String(128), nullable=False, unique=True)
         password = Column(String(1000), nullable=False)
+        tales = relationship('Tale', backref='user')
     else:
         email = ""
         password = ""

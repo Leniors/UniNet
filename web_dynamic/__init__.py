@@ -11,3 +11,6 @@ from . import sign_up
 from . import current_user
 from . import logout
 from . import home
+from . import create_tale
+from . import create_teaser
+from . import create_video

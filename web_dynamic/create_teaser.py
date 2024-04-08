@@ -8,8 +8,8 @@ from models.user import User
 from flask import render_template
 from flask_login import login_required, current_user
 
-@app_views.route('/user', strict_slashes=False, methods=["GET"])
+@app_views.route('/create-teaser', strict_slashes=False, methods=["GET"])
 @login_required
-def user():
-    """Current user"""
-    return render_template('user_profile.html', user=current_user, tales=current_user.tales)
+def create_teaser():
+    """Create Teaser"""
+    return render_template('create_teaser.html', user=current_user)
