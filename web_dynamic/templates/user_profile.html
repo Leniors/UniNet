@@ -75,20 +75,18 @@
         
         <div class="user_content">
             {% if tales %}
-            <div class="content_section">
-                <div class="tales_content">
-                    {% for tale in tales %}
-                    <article class="tale">
-                        <div class="tale-header">
-                            <h2 class="tale-title">{{ tale.title }}</h2>
-                            <div class="tale-metadata">Author: {{ user.username }} | Date: {{ tale.created_at }} </div>
-                        </div>
-                        <div class="tale-content">
-                                {{ tale.content }}
-                        </div>
-                    </article>
-                    {% endfor %}
-                </div>
+            <div class="tales_content">
+                {% for tale in tales %}
+                <article class="tale">
+                    <div class="tale-header">
+                        <h2 class="tale-title">{{ tale.title }}</h2>
+                        <div class="tale-metadata">Author: {{ user.username }} | Date: {{ tale.created_at }} </div>
+                    </div>
+                    <div class="tale-content">
+                            {{ tale.content }}
+                    </div>
+                </article>
+                {% endfor %}
             </div>
             {% endif %}
             

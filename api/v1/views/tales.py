@@ -12,6 +12,9 @@ from api.v1.views import app_views
 @app_views.route('/tales', methods=['GET'], strict_slashes=False)
 def get_tales():
     tales = storage.all(Tale)
+    """for tale in tales.values():
+        print(tale.user.username)
+    print(tales)"""
     return jsonify([tale.to_dict() for tale in tales.values()]), 200
 
 """
